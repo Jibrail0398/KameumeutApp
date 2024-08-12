@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'sample_app',
+  appId: 'io.kameumeutapp.starter',
+  appName: 'Kameumeut Farm',
   webDir: 'www',
   server: {
     androidScheme: 'https'

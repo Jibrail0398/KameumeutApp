@@ -1,0 +1,229 @@
+@font-face {
+    font-family: 'Cinderella';
+    src: url('../../../assets/fonts/Cinderela\ Personal\ Use.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raphtalia';
+    src: url('../../../assets/fonts/Raphtalia\ Personal\ Use.otf') format('truetype');
+    
+}
+@font-face {
+    font-family: 'AdobeDevanagariRegular';
+    src: url('../../../assets/fonts/AdobeDevanagari-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+ion-content{
+    .certificate-container{
+        
+        width: 842px;
+        height: 595px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .certificate{
+            width: 842px;
+            height: 595px;
+            background: url("../../../assets/img/CertificateBackground.jpg");
+
+            
+            .teks-content{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-top: 8%;
+
+                .title{
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    font-size: 60px;
+                }
+                .bismillah{
+                    margin-top: 0;
+                    font-size: 20px;
+                    margin-bottom: 0;
+                }
+                
+                .textStyle{
+                    color: rgb(98, 210, 42);
+                    -webkit-text-stroke: 0.5px #f0f717;
+                }
+                .cinderella{
+                    margin: 0;
+                    font-family: 'cinderella',sans-serif; 
+                }
+                .raphtalia{
+                    margin: 0;
+                    font-family: "Raphtalia",sans-serif;
+                }
+                .AdobeDevanagariRegular{
+                    margin: 0;
+                    font-family: "AdobeDevanagariRegular",sans-serif;
+                }
+                .Bio{
+                    margin-top: 0;
+                    text-align: center;
+
+                    .name{
+                        margin-top: 5px;
+                        font-size: 32px;
+                    }
+
+                    p{
+                        margin-bottom: 0;
+                        font-size: 20px;
+                    }
+                    .birthday{
+                        font-size: 34px;
+                        
+                    }
+                    .parents{
+                        font-size: 30px;
+                    }
+                    hr{
+                        color:#62d22a;
+                        border: 2px;
+                        height: 2px;
+                    }
+                    .RizkyAqiqah{
+                        color: #62d22a;
+                        font-size: 20px; 
+                        margin-top: 5px;
+                        text-decoration: underline overline;
+                        text-underline-offset: 5px;
+                    }
+                  
+                }
+            }
+            .dateandteks{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                .ttd{
+                    font-size: 16px;
+                    
+                }
+            }
+        }
+
+        .certificatePhoto{
+            width: 842px;
+            height: 595px;
+            background: url("../../../assets/img/CertificateBackground1.jpg");
+
+            
+            .teks-content{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-top: 6%;
+                
+                .image-container{
+                    height: 100px;
+                    width: 100px;
+                    overflow: hidden;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .title{
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    font-size: 43px;
+                }
+                .bismillah{
+                    margin-top: 0;
+                    font-size: 18px;
+                    margin-bottom: 0;
+                }
+                
+                .textStyle{
+                    color: rgb(98, 210, 42);
+                    -webkit-text-stroke: 0.5px #f0f717;
+                }
+                .cinderella{
+                    margin: 0;
+                    font-family: 'cinderella',sans-serif; 
+                }
+                .raphtalia{
+                    margin: 0;
+                    font-family: "Raphtalia",sans-serif;
+                }
+                .AdobeDevanagariRegular{
+                    margin: 0;
+                    font-family: "AdobeDevanagariRegular",sans-serif;
+                }
+                .Bio{
+                    margin-top: 0;
+                    text-align: center;
+
+                    .name{
+                        margin-top: 5px;
+                        font-size: 26px;
+                    }
+
+                    p{
+                        margin: 0;
+                        font-size: 18px;
+                    }
+                    .birthday{
+                        font-size: 28px;
+                        
+                    }
+                    .parents{
+                        font-size: 24px;
+                    }
+                    hr{
+                        color:#62d22a;
+                        border: 2px;
+                        height: 2px;
+                    }
+                    .RizkyAqiqah{
+                        color: #62d22a;
+                        font-size: 18px; 
+                        margin: 0;
+                        text-decoration: underline overline;
+                    }
+                }
+            }
+            .dateandteks{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                .ttd{
+                    font-size: 15px;
+                    
+                }
+            }
+        }
+    }
+    
+}
+
+@media only screen and (min-width: 300px) and (max-width: 380px) {
+    .certificate,.certificatePhoto {
+        transform: scale(0.4); 
+        transform-origin: clamp(1%,5vw,10%) clamp(20%,5vw,30%);
+    }
+  }
+@media only screen and (min-width: 390px) and (max-width: 460px) {
+    .certificate,.certificatePhoto {
+        transform: scale(0.4); 
+        transform-origin: clamp(8%,5vw,10%) clamp(20%,5vw,30%);
+    }
+}
+  
+  @media only screen and (min-width: 800px) {
+    .certificate, .certificatePhoto {
+        transform: scale(0.7); 
+        transform-origin: clamp(130%,5vw,200%) clamp(10%,5vw,50%);
+    }
+  }

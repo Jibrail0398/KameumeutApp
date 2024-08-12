@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Kameumeut Farm</string>
+    <string name="title_activity_main">Kameumeut Farm</string>
+    <string name="package_name">io.kameumeutapp.starter</string>
+    <string name="custom_url_scheme">io.kameumeutapp.starter</string>
+</resources>

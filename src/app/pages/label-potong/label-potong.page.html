@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>label-potong</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-button (click)="generatePDF()" >Cetak</ion-button>
+  <div class="label-potong-container" #labelpotong  id="label-potong-container" >
+    <div class="label-potong"  >
+      <img src="../../../assets/img/logoKameumeut.jpg" alt="">
+
+      <div class="text-content">
+        <h1>AQIQAH</h1>
+        <h1>{{name}}</h1>
+        <h1>Bin</h1>
+        <h1>{{father}}</h1>
+      </div>
+      <h1 class="rizkyAqiqah cinderella" >Rizky Aqiqah</h1>
+    </div>
+  </div>
+</ion-content>

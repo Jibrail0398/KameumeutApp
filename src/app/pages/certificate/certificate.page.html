@@ -1,0 +1,83 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>certificate</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">certificate</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-button (click)="generatePNG()" >Cetak</ion-button>
+  <div class="certificate-container"  >
+  
+    <div class="certificate" #certificate  *ngIf="!isAnyPhoto"  id="certificate">
+      <div class="teks-content">
+        <h1 class="textStyle raphtalia title" >
+          Sertifikat Aqiqah
+        </h1>
+        <p class="bismillah AdobeDevanagariRegular" >
+          Dengan mengucap syukur kepada Allah Subhanahu Wa Ta'ala, sertifikat kami berikan kepada:
+        </p>
+        <div class="Bio">
+          <h1 class="cinderella textStyle name" >{{name}}</h1>
+          <p class="AdobeDevanagariRegular" >Lahir</p>
+          <h1 class="raphtalia textStyle birthday" >{{birthday}}</h1>
+          <p class="AdobeDevanagariRegular" >Anak {{child}} dari:</p>
+          <h1 class="cinderella textStyle parents" style="margin-bottom: 5px;" > Bp. {{father}} & Ibu {{mother}} </h1>
+          <p class="AdobeDevanagariRegular" >Telah terlaksana Aqiqah pada <b>{{dayAqiqah}}, {{dateAqiqah}}</b></p>
+          <p class="AdobeDevanagariRegular" >Ya robb... jadikan ia penyejuk mata dan penenang hati, senantiasa dalam lindunganMu,</p>
+          <p class="AdobeDevanagariRegular" >bersih hatinya, sehat, cerdas, santun perangainya, dan jadikanlah ia anak yang</p>
+          <p class="AdobeDevanagariRegular" >berbakti kepadaMu, senantiasa menjaga shalat, mengamalkan Al-Quran, dan sunnah.</p>
+          <p class="AdobeDevanagariRegular" >Berbakti kepada Orang tua, bermanfaat bagi sesama, serta menjadi berkah</p>
+          <div class="dateandteks">
+            <p class="AdobeDevanagariRegular" style="margin-left: 285px;" >dunia dan akhirat..... Aamiin.</p>
+            
+            <p class="AdobeDevanagariRegular ttd" style="margin-left: 50px;" >Karawang, {{dateAqiqah}}</p>
+          </div>
+          <p class=" AdobeDevanagariRegular RizkyAqiqah " >Rizky Aqiqah</p>
+          <hr>
+        </div>
+      </div>
+    </div>
+
+    <div class="certificatePhoto"  #certificate *ngIf="isAnyPhoto"  id="certificate">
+      <div class="teks-content">
+        <h1 class="textStyle raphtalia title" >
+          Sertifikat Aqiqah
+        </h1>
+        <p class="bismillah AdobeDevanagariRegular" >
+          Dengan mengucap syukur kepada Allah Subhanahu Wa Ta'ala, sertifikat kami berikan kepada:
+        </p>
+        <div class="image-container">
+
+          <img src="../../../assets/img/NADIL SYAKIR.jpg" alt="FotoBayi">
+        </div>
+        <div class="Bio">
+          <h1 class="cinderella textStyle name" >{{name}}</h1>
+          <p class="AdobeDevanagariRegular" >Lahir</p>
+          <h1 class="raphtalia textStyle birthday" >{{birthday}}</h1>
+          <p class="AdobeDevanagariRegular" >Anak {{child}} dari:</p>
+          <h1 class="cinderella textStyle parents" style="margin-bottom: 5px;" > Bp. {{father}} & Ibu {{mother}} </h1>
+          <p class="AdobeDevanagariRegular" >Telah terlaksana Aqiqah pada <b>{{dayAqiqah}}, {{dateAqiqah}}</b></p>
+          <p class="AdobeDevanagariRegular" >Ya robb... jadikan ia penyejuk mata dan penenang hati, senantiasa dalam lindunganMu,</p>
+          <p class="AdobeDevanagariRegular" >bersih hatinya, sehat, cerdas, santun perangainya, dan jadikanlah ia anak yang</p>
+          <p class="AdobeDevanagariRegular" >berbakti kepadaMu, senantiasa menjaga shalat, mengamalkan Al-Quran, dan sunnah.</p>
+          <p class="AdobeDevanagariRegular" >Berbakti kepada Orang tua, bermanfaat bagi sesama, serta menjadi berkah</p>
+          <div class="dateandteks">
+            <p class="AdobeDevanagariRegular" style="margin-left: 285px;" >dunia dan akhirat..... Aamiin.</p>
+            
+            <p class="AdobeDevanagariRegular ttd" style="margin-left: 50px;" >Karawang, {{dateAqiqah}}</p>
+          </div>
+          
+          <p class=" AdobeDevanagariRegular RizkyAqiqah " >Rizky Aqiqah</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

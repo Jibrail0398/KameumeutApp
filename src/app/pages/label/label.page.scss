@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'Cinderella';
+    src: url('../../../assets/fonts/Cinderela\ Personal\ Use.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raphtalia';
+    src: url('../../../assets/fonts/Raphtalia\ Personal\ Use.otf') format('truetype');
+    
+}
+@font-face {
+    font-family: 'AdobeDevanagariRegular';
+    src: url('../../../assets/fonts/AdobeDevanagari-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+ion-content{
+    .label-container{
+        width: 708px;
+        height: 596px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        .label{
+            width: 708px;
+            height: 596px;
+            background: url("../../../assets/img/LabelBackground.jpg");
+        }
+        
+    }
+
+    .cinderella{
+        margin: 0;
+        font-family: 'cinderella',sans-serif; 
+    }
+    .raphtalia{
+        margin: 0;
+        font-family: "Raphtalia",sans-serif;
+    }
+    .AdobeDevanagariRegular{
+        margin: 0;
+        font-family: "AdobeDevanagariRegular",sans-serif;
+    }
+    .textStyle{
+        color: rgb(98, 210, 42);
+        -webkit-text-stroke: 0.5px #f0f717;
+    }
+
+    ion-grid{
+        ion-row{
+
+            margin-top: 16%;
+
+            .textarea{
+
+                .title{
+                    font-size: 42px;
+                    text-align: center;
+                    margin-bottom: 5px;
+                }
+                p{
+                    line-height: 20px;
+                    font-size: 20px;
+                    margin-left: 10px;
+                }
+            }
+            .photoarea{
+                .image-container{
+                    height: 250px;
+                    width: 200px;
+                    overflow: hidden;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .text{
+                    margin-top: 2%;
+                    p{
+                        font-size: 20px;
+                        line-height: 22px;
+                    }
+                    p:nth-child(1){
+                        margin-bottom: 7px;
+                    }
+                }
+
+            }
+            
+        }
+    }
+
+    .textNoPhoto{
+        
+        width: 100%;
+        text-align: center;
+        p{
+            font-size: 22px;
+            line-height: 22px;
+        }
+        .titleNoPhoto{
+            font-size: 48px;
+        }
+    }
+    .parents{
+        margin-top: 5px;
+        font-size: 22px;
+        margin-left: 50%;
+        line-height: 22px;
+    }
+    .parents p:nth-child(1){
+        margin-bottom: 8px;
+    }
+
+
+}
+
+@media only screen and (max-width: 768px) {
+    ion-content{
+        // .label-container{
+        //     margin-top: 50px;
+        //     transform: scale(0.4); 
+        //     transform-origin: top left;
+        //     width: 250%;
+        // }
+
+        .label-container{
+            width: 200%;
+            
+        }
+        .label{
+            margin-top: 50px;
+            transform: scale(0.4); 
+            transform-origin: top left;
+            
+        }
+
+    }
+    
+  }
+  @media only screen and (min-width: 800px) and (max-width:900px) {
+    .label-container{
+        margin-top: 50px;
+        transform: scale(0.7); 
+        transform-origin: top center;
+        width: 250%;
+
+        
+        
+    }
+    
+  }
