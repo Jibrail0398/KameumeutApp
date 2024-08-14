@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SharingService } from 'src/app/service/sharing.service';
+import { StorageServiceService } from 'src/app/service/storage-service.service';
 import html2canvas from 'html2canvas';
 import { ViewChild,ElementRef } from '@angular/core';
 import { Filesystem, Directory, Encoding } from '@capacitor/filesystem';
@@ -12,11 +13,23 @@ import { Filesystem, Directory, Encoding } from '@capacitor/filesystem';
 export class CertificatePage implements OnInit {
 
   constructor(
-    private sharing:SharingService
+    private sharing:SharingService,
+    private storage:StorageServiceService
   ) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    await this.storage.makeStorage();
+    this.storage.set('myuserInfo',["Ahmad"]);
+    this.storage.set('myuserInfo',["Feri"]);
+
+    const item = await this.storage.get("myuserInfo");
+    const keys = await this.storage.keys();
+    console.log(item);
+    console.log(keys);
   }
+
+  
+
 
   isAnyPhoto = true;
 

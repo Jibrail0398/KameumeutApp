@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { HomePageRoutingModule } from './home-routing.module';
+import { AqiqahPageRoutingModule } from './aqiqah-routing.module';
 
-import { HomePage } from './home.page';
+import { AqiqahPage } from './aqiqah.page';
 import { NavigationComponent } from 'src/app/components/navigation/navigation.component';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { NavigationComponent } from 'src/app/components/navigation/navigation.co
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule,
+    AqiqahPageRoutingModule,
     NavigationComponent
   ],
-  declarations: [HomePage]
+  declarations: [AqiqahPage]
 })
-export class HomePageModule {}
+export class AqiqahPageModule {}

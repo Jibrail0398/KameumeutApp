@@ -19,6 +19,10 @@ const routes: Routes = [
   {
     path: 'label-potong',
     loadChildren: () => import('./label-potong/label-potong.module').then( m => m.LabelPotongPageModule)
+  },
+  {
+    path: 'aqiqah',
+    loadChildren: () => import('./aqiqah/aqiqah.module').then( m => m.AqiqahPageModule)
   }
 ];
 

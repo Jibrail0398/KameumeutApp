@@ -224,6 +224,6 @@ ion-content{
   @media only screen and (min-width: 800px) {
     .certificate, .certificatePhoto {
         transform: scale(0.7); 
-        transform-origin: clamp(130%,5vw,200%) clamp(10%,5vw,50%);
+        transform-origin: clamp(50%,5vw,200%) clamp(10%,5vw,50%);
     }
   }
