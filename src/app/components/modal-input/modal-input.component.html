@@ -1,0 +1,56 @@
+<ion-modal  class="ion-modal" #modal [trigger]="triggermodal" [canDismiss]="canDismiss" [presentingElement]="presentingElement">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Modal</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="modal.dismiss('closeModal')">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <h1>Biodata Pemesan</h1>
+
+      <!-- Input -->
+
+      <ion-checkbox [(ngModel)]="isAnyPhoto" (ionChange)="transferPhotoStatus($event)" >Gunakan Foto?</ion-checkbox>
+
+      <div *ngIf="isAnyPhoto" class="inputFoto" >
+        <input type="file">
+      </div>
+
+      <ion-input label="Nama Anak"  [(ngModel)]="Name" (input)="transferName()" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+
+      <ion-radio-group [(ngModel)]="Gender" (ionChange)="transferGender($event)" >
+        <ion-radio value="male">Laki-Laki</ion-radio><br />
+        <ion-radio value="female">Perempuan</ion-radio><br />
+      </ion-radio-group>
+      
+      <ion-select label="Anak Keberapa?" [(ngModel)]="Urutan"  (ionChange)="transferUrutan($event)" placeholder="Pilih urutan" fill="outline" >
+        <ion-select-option value="Pertama">Anak Pertama</ion-select-option>
+        <ion-select-option value="Kedua">Anak Kedua</ion-select-option>
+        <ion-select-option value="Ketiga">Anak Ketiga</ion-select-option>
+        <ion-select-option value="Keempat">Anak Keempat</ion-select-option>
+        <ion-select-option value="Kelima">Anak Kelima</ion-select-option>
+        <ion-select-option value="Keenam">Anak Keenam</ion-select-option>
+        <ion-select-option value="Ketujuh">Anak Ketujuh</ion-select-option>
+        <ion-select-option value="Kedelapan">Anak Kedelapan</ion-select-option>
+        <ion-select-option value="Kesembilan">Anak Kesembilan</ion-select-option>
+        <ion-select-option value="Kesepuluh">Anak Kesepuluh</ion-select-option>
+      </ion-select>
+
+      <ion-input label="Tanggal Lahir" [(ngModel)]="birth" (input)="transferBirth()"  label-placement="floating" fill="outline" placeholder="Enter text" type="date"  ></ion-input >
+
+      <ion-input label="Tanggal Aqiqah" [(ngModel)]="Aqiqah" (input)="transferAqiqah()" label-placement="floating" fill="outline" placeholder="Enter text" type="date" ></ion-input>
+
+      <ion-input label="Nama Ayah" [(ngModel)]="Father" (input)="transferFather()" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+
+      <ion-input label="Nama Ibu" [(ngModel)]="Mother" (input)="transferMother()"  label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+
+      <ion-button expand="block" (click)="modal.dismiss('saveData')" >Simpan</ion-button>
+
+
+    </ion-content>
+  </ng-template>
+</ion-modal>
+

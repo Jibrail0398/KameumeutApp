@@ -5,11 +5,41 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">aqiqah</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div>
+    <ion-button id="open-modal" >Tambah Pesanan</ion-button>
+    <app-modal-input 
+    #modals
+    triggermodal="open-modal" 
+    (name)="receiveName($event)"
+    (gender)="receiveGender($event)"
+    (urutan)="receiveUrutan($event)"
+    (birthChange)="receiveBirth($event)"
+    (aqiqah)="receiveAqiqah($event)"
+    (father)="receiveFather($event)"
+    (mother)="receiveMother($event)"
+    (saveDataEvent)="saveData()"
+    ></app-modal-input>
+
+    
+  </div>
+
+  <ion-accordion-group>
+    <ion-accordion *ngFor="let listCustomer of mycustomer" >
+      <ion-item slot="header" color="light">
+        <ion-label>{{ listCustomer.name }}</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-button expand="block" (click)="toLabel(listCustomer.id)" >Label</ion-button>
+        <ion-button expand="block" (click)="toCertificate(listCustomer.id)">Sertifikat</ion-button>
+        <ion-button expand="block" (click)="toLabelPotong(listCustomer.id)">Label Potong</ion-button>
+      </div>
+      
+    </ion-accordion>
+  </ion-accordion-group>
+  
 </ion-content>
 
 <ion-footer>

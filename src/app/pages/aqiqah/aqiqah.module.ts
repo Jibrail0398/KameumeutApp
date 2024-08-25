@@ -8,6 +8,7 @@ import { AqiqahPageRoutingModule } from './aqiqah-routing.module';
 
 import { AqiqahPage } from './aqiqah.page';
 import { NavigationComponent } from 'src/app/components/navigation/navigation.component';
+import { ModalInputComponent } from 'src/app/components/modal-input/modal-input.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { NavigationComponent } from 'src/app/components/navigation/navigation.co
     FormsModule,
     IonicModule,
     AqiqahPageRoutingModule,
-    NavigationComponent
+    NavigationComponent,
+    ModalInputComponent
   ],
   declarations: [AqiqahPage]
 })

@@ -7,6 +7,7 @@ import { ElementRef, ViewChild } from '@angular/core';
 
 
 
+
 @Component({
   selector: 'app-label',
   templateUrl: './label.page.html',
@@ -16,6 +17,7 @@ export class LabelPage implements OnInit {
 
   constructor(
     private sharing:SharingService,
+    
    
   ) { }
 
@@ -27,17 +29,20 @@ export class LabelPage implements OnInit {
     .catch((error)=>{
       console.error("Error checking permissions: ",error)
     })
+    console.log(this.biodata);
   }
+
+  biodata = this.sharing.getBiodata();
 
   isAnyPhoto = false;
 
-  Birth = "2024-06-30T08:45:07.541Z";
+  Birth = this.biodata.birth;
 
-  gender = "male";
-  name = "Nadil Ahmad Syakir";
-  child = "kedua";
-  father = "Wahyu Albi Prasetia";
-  mother = "Siti Ropi'ah";
+  gender = this.biodata.gender;
+  name = this.biodata.name;
+  child = this.biodata.child;
+  father = this.biodata.father;
+  mother = this.biodata.mother;
 
   birthday = this.sharing.formatTanggalIndonesia(this.Birth);
 

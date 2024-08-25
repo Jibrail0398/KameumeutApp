@@ -17,35 +17,28 @@ export class CertificatePage implements OnInit {
     private storage:StorageServiceService
   ) { }
 
-  async ngOnInit() {
-    await this.storage.makeStorage();
-    this.storage.set('myuserInfo',["Ahmad"]);
-    this.storage.set('myuserInfo',["Feri"]);
-
-    const item = await this.storage.get("myuserInfo");
-    const keys = await this.storage.keys();
-    console.log(item);
-    console.log(keys);
+  ngOnInit() {
+    
   }
 
-  
+  biodata = this.sharing.getBiodata();
 
+  isAnyPhoto = false;
 
-  isAnyPhoto = true;
+  Birth = this.biodata.birth;
+  Aqiqah = this.biodata.Aqiqah;
 
-  Birth = "2024-06-30T08:45:07.541Z";
-  Aqiqah = "2024-08-11T08:45:07.541Z";
-
-  name = "Nadil Syakir";
-  child = "kedua";
-  father = "Wahyu Albi Prasetia";
-  mother = "Siti Ropi'ah";
+  name = this.biodata.name;
+  child = this.biodata.child;
+  father = this.biodata.father;
+  mother = this.biodata.mother;
 
   birthday = this.sharing.formatTanggalIndonesia(this.Birth);
   dayAqiqah = this.sharing.getDate(this.Aqiqah);
   dateAqiqah = this.sharing.formatTanggalIndonesia(this.Aqiqah);
 
   @ViewChild('certificate')certificate!:ElementRef;
+
   async generatePNG() {
     
     setTimeout(() => {
@@ -53,13 +46,11 @@ export class CertificatePage implements OnInit {
       if (data) {
         const options = {
           scale: 10, // sesuaikan dengan skala yang diperlukan
-          
         };
         html2canvas(data, options).then(async (canvas) => {
           const contentDataURL = canvas.toDataURL('image/png');
           const fileName = `Sertifikat Rizky Aqiqah ${this.name}.png`;
           const filePath = `Kameumeut Farm/Sertifikat/${fileName}`;
-          
           await Filesystem.writeFile({
             path: filePath,
             data: contentDataURL,

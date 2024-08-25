@@ -1,5 +1,8 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/"></ion-back-button>
+    </ion-buttons>
     <ion-title>label</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,10 +12,11 @@
     <ion-toolbar>
       <ion-title size="large">label</ion-title>
     </ion-toolbar>
+    
   </ion-header>
 
   <ion-button (click)="generatePNG()" >Cetak</ion-button>
-  <ion-button (click)="generatePNGDev()" >Cetak di browser</ion-button>
+  <!-- <ion-button (click)="generatePNGDev()" >Cetak di browser</ion-button> -->
 
   <div class="label-container" *ngIf="isAnyPhoto" >
 

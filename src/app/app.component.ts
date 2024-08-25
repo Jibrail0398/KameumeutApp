@@ -12,6 +12,8 @@ export class AppComponent {
   constructor(private platform:Platform) {
     //Membuat Direktori ketika aplikasi diinstall
     this.initializeApp();
+    
+    
   }
 
   //Fungsi untuk menjalankan logika inisialisasi aplikasi ketika platform Ionic sudah siap. 
@@ -43,6 +45,8 @@ export class AppComponent {
       }
     }
   }
+
+  
   
 
 

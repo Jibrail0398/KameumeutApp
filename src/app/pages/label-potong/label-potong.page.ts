@@ -3,6 +3,7 @@ import { jsPDF } from 'jspdf';
 import html2canvas from 'html2canvas';
 import { ViewChild, ElementRef } from '@angular/core';
 import { Filesystem, Directory } from '@capacitor/filesystem';
+import { SharingService } from 'src/app/service/sharing.service';
 
 @Component({
   selector: 'app-label-potong',
@@ -11,14 +12,15 @@ import { Filesystem, Directory } from '@capacitor/filesystem';
 })
 export class LabelPotongPage implements OnInit {
 
-  constructor() { }
+  constructor(private sharing:SharingService) { }
 
   ngOnInit() {
   }
-
-  name = "Syakil Nadir";
-  gender = "male";
-  father = "Wahyu";
+  
+  biodata = this.sharing.getBiodata();
+  name = this.biodata.name;
+  gender = this.biodata.gender;
+  father = this.biodata.father;
 
   @ViewChild('labelpotong') labelPotong!: ElementRef;
 

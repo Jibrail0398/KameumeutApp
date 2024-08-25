@@ -23,4 +23,11 @@ export class SharingService {
     }
     return convertdate.toLocaleDateString('id-ID',options);
   }
+  biodata:any;
+  setBiodata(data:object){
+    this.biodata = data
+  }
+  getBiodata(){
+    return this.biodata;
+  }
 }
